@@ -3,9 +3,9 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from backend.app.database import get_db
-from backend.app.models.product import Product
-from backend.app.schemas.product import ProductCreate, ProductOut, ProductUpdate
+from app.database import get_db
+from app.models.product import Product
+from app.schemas.product import ProductCreate, ProductOut, ProductUpdate
 
 
 router = APIRouter(prefix="/products", tags=["products"])

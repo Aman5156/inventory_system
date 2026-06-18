@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from backend.app.database import get_db
-from backend.app.models.order import Order
-from backend.app.models.order_item import OrderItem
-from backend.app.models.product import Product
-from backend.app.schemas.order import OrderCreate, OrderOut
-from backend.app.services.inventory_service import InsufficientStockError, create_order_with_validation
+from app.database import get_db
+from app.models.order import Order
+from app.models.order_item import OrderItem
+from app.models.product import Product
+from app.schemas.order import OrderCreate, OrderOut
+from app.services.inventory_service import InsufficientStockError, create_order_with_validation
 
 
 router = APIRouter(prefix="/orders", tags=["orders"])

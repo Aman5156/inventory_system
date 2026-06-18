@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, UniqueConstraint
 
-from backend.app.models.base import Base
+from app.models.base import Base
 
 
 class Product(Base):
